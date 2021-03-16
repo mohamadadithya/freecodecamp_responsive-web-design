@@ -1,0 +1,71 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #F8B822;
+    font-family: 'Poppins', sans-serif;
+    padding: 45px 0;
+}
+
+section#hero-image .container {
+    text-align: center;
+    margin-top: 45px;
+}
+
+section#hero-image h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #F8B822;
+}
+
+section#hero-image img {
+    border-radius: 10px;
+    border: 3px solid #F8B822;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+section#hero-image p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+section#hero-timeline h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section#hero-timeline li {
+    color: white;
+    margin-bottom: 12px;
+}
+
+#tribute-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Utility Class */
+.container {
+    padding: 0 2em;
+}
+
+@media (min-width: 992px) {
+    section#hero-image img {
+        max-width: 50%;
+    }
+
+    .container {
+        padding: 0 10em;
+    }
+}
