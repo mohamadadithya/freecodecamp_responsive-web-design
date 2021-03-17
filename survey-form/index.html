@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title" class="text-center">Rock Survey Form</h1>
+        <p id="description" class="text-center">Thank you for taking the time to help us improve the platform.</p>
+        <!-- Survey Form -->
+        <form action="" id="survey-form">
+            <div class="form-control">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-control">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-control">
+                <label for="age" id="number-label">Age (Optional)</label>
+                <input type="number" id="number" placeholder="Enter your age" min="1" max="2" required>
+            </div>
+            <!-- Select -->
+            <div class="form-control">
+                <label for="dropdown">Which option best describes your current role?</label>
+                <select name="role" id="dropdown" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="full-time-job">Full Time Job</option>
+                    <option value="full-time-learner">Full Time Learner</option>
+                    <option value="freelancer">Freelancer</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <!-- Radios -->
+            <div class="form-group">
+                <p class="custom-label">Who do you know the type of rock genre?</p>
+                <label>
+                    <input name="user-recommend" value="family" type="radio" class="input-radio" checked /> Family
+                </label>
+                <label>
+                    <input name="user-recommend" value="friend" type="radio" class="input-radio" /> Friend
+                </label>
+                <label>
+                    <input name="user-recommend" value="myself" type="radio" class="input-radio" /> Myself
+                </label>
+            </div>
+            <!-- Checkboxes -->
+            <div class="form-group">
+                <p class="custom-label">What are your favorite rock sub-genres?</p>
+                <label>
+                    <input type="checkbox" value="rock-and-roll"> Rock & Roll
+                </label>
+                <label>
+                    <input type="checkbox" value="psychedelic-rock"> Psychedelic Rock
+                </label>
+                <label>
+                    <input type="checkbox" value="progressive-rock"> Progressive Rock
+                </label>
+                <label>
+                    <input type="checkbox" value="alternative-rock"> Alternative Rock
+                </label>
+                <label>
+                    <input type="checkbox" value="hard-rock"> Hard Rock
+                </label>
+                <label>
+                    <input type="checkbox" value="punk-rock"> Punk Rock
+                </label>
+                <label>
+                    <input type="checkbox" value="blues-rock"> Blues Rock
+                </label>
+                <label>
+                    <input type="checkbox" value="metal"> Metal
+                </label>
+                <label>
+                    <input type="checkbox" value="grunge"> Grunge
+                </label>
+                <label>
+                    <input type="checkbox" value="deathcore"> Deathcore
+                </label>
+                <label>
+                    <input type="checkbox" value="other"> Other
+                </label>
+            </div>
+            <!-- Textarea -->
+            <div class="form-control">
+                <label for="comment">Any comments or suggestions?</label>
+                <textarea name="comment" id="comment" cols="30" rows="10"
+                    placeholder="Enter your comment here..."></textarea>
+            </div>
+            <button type="submit" id="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
