@@ -29,7 +29,7 @@ body::before {
 }
 
 .container {
-    padding: 4em 4em;
+    padding: 4em 2em;
 }
 
 #title {
