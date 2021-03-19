@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300;400;700&display=swap');
+
+:root {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 120px;
+}
+
+/* Header */
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#header-img {
+    filter: invert();
+    width: 10%;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(31, 28, 28);
+    justify-content: space-around;
+    padding: 20px 0;
+    color: white;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover {
+    color: darkgrey;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Product */
+#product-section h2 {
+    margin-bottom: 10px;
+}
+
+#product-section .product-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 100px;
+}
+
+#product-section .product-group img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Features */
+#features-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+#features-section .card {
+    padding: 2em 2em;
+    text-align: center;
+}
+
+#features-section .card .fas {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+#features-section .card h2 {
+    margin-bottom: 5px;
+}
+
+#video-section .container {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#video {
+    width: 40%;
+    border-radius: 5px;
+}
+
+#contact-section .container {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#contact-section h2 {
+    margin-bottom: 20px;
+}
+
+#contact-section input,
+button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid #cfcfd3;
+    outline: 0;
+}
+
+#contact-section input {
+    padding: 1em;
+    width: 40%;
+    border-radius: 5px;
+}
+
+#contact-section input[type="submit"] {
+    padding: 1em 1em;
+    border-radius: 5px;
+    width: 20%;
+    background-color: rgb(31, 28, 28);
+    color: white;
+    cursor: pointer;
+}
+
+#footer {
+    padding: 1.5em 0;
+    background-color: rgb(31, 28, 28);
+    color: white;
+    text-align: center;
+}
+
+/* Mobile Size */
+@media screen and (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: rgb(31, 28, 28);
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all .8s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        transition: all .8s;
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #video {
+        width: 100%;
+    }
+
+    #contact-section input {
+        width: 80%;
+    }
+
+    #contact-section input[type="submit"] {
+        width: 40%;
+    }
+}
+
+/* End of Header */
+
+.container {
+    padding: 0 2em;
+}
+
+/* Utility Class */
+
+.text-center {
+    text-align: center;
+}
